@@ -2,7 +2,7 @@
 
 require "active_support/concern"
 
-module Heartbeat
+module LibraryHeartbeat
   module HeartBeatExecutionConcern
     extend ActiveSupport::Concern
 

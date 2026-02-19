@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Heartbeat
+module LibraryHeartbeat
   module MigrationHelpers
     def create_heartbeats_table(prefix)
       table = :"#{prefix}heartbeats"

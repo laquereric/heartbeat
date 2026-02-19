@@ -3,6 +3,6 @@ type: library
 name: heartbeat
 path: top/library
 gitlink: https://github.com/laquereric/heartbeat.git
-module_name: Heartbeat
+module_name: LibraryHeartbeat
 repo_urls:
   github: https://github.com/laquereric/heartbeat

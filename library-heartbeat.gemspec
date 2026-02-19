@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/heartbeat/version"
+require_relative "lib/library_heartbeat/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "heartbeat"
-  spec.version = Heartbeat::VERSION
+  spec.name = "library-heartbeat"
+  spec.version = LibraryHeartbeat::VERSION
   spec.authors = ["Eric Laquer"]
   spec.email = ["LaquerEric@gmail.com"]
 

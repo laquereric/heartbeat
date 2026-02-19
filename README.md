@@ -1,4 +1,4 @@
-# Heartbeat
+# Library Heartbeat
 
 Reusable ActiveRecord concerns and migration helpers for recurring task scheduling and execution tracking across Ecosystems engines.
 
@@ -7,7 +7,7 @@ Reusable ActiveRecord concerns and migration helpers for recurring task scheduli
 Add to your Gemfile:
 
 ```ruby
-gem "heartbeat", path: "../../library/heartbeat"
+gem "library-heartbeat", path: "../../library/library-heartbeat"
 ```
 
 Then:
@@ -28,7 +28,7 @@ bundle install
 
 ```ruby
 class CreateHeartbeats < ActiveRecord::Migration[7.1]
-  include Heartbeat::MigrationHelpers
+  include LibraryHeartbeat::MigrationHelpers
 
   def change
     create_heartbeats_table("my_prefix_")
@@ -41,13 +41,13 @@ end
 
 ```ruby
 class MyEngine::HeartBeat < ApplicationRecord
-  include Heartbeat::HeartBeatConcern
+  include LibraryHeartbeat::HeartBeatConcern
 
   self.table_name = "my_prefix_heartbeats"
 end
 
 class MyEngine::HeartBeatExecution < ApplicationRecord
-  include Heartbeat::HeartBeatExecutionConcern
+  include LibraryHeartbeat::HeartBeatExecutionConcern
 
   self.table_name = "my_prefix_heartbeat_executions"
 end
